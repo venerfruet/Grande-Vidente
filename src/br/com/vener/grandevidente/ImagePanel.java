@@ -2,7 +2,6 @@ package br.com.vener.grandevidente;
 
 import java.awt.Dimension;
 import java.awt.Graphics;
-import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.LayoutManager;
 import java.awt.Rectangle;
@@ -41,12 +40,11 @@ public class ImagePanel extends JPanel {
 	public void paintComponent(Graphics g) {
 		try {
 
-			Graphics2D graphics2d = (Graphics2D) g;
 			InputStream inputStream = getClass().getResourceAsStream(urlImage);
 			BufferedImage bufferedImage = ImageIO.read(inputStream);
 			Image imageRedim = bufferedImage.getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_DEFAULT);
 
-			graphics2d.drawImage(imageRedim, 0, 0, this);
+			g.drawImage(imageRedim, 0, 0, this);
 
 		} catch (Exception e) {
 
