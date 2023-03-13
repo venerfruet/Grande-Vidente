@@ -40,7 +40,7 @@ public class TxtKeyAdapter extends KeyAdapter {
 
 			length = Seer.outputText.getText().length() - 1;
 			length = length < 0 ? 0 : length;
-			txt = "" + Seer.outputText.getText().substring(0, length);
+			txt = Seer.outputText.getText().substring(0, length);
 
 			length = memoText.length();
 			length = length < 0 ? 0 : length;
