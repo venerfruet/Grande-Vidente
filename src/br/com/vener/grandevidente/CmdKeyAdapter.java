@@ -24,8 +24,6 @@ public class CmdKeyAdapter extends KeyAdapter {
 		case KeyEvent.VK_ENTER:
 			hasEnter = !hasEnter;
 			break;
-		default:
-			break;
 		}
 
 	}
